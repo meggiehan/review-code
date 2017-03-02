@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/baicaijia.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--header-->
+    <header id="header">
+        <img src="images/arr3.png" alt="">
+        <p>白菜价-淘宝内部价</p>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+<!--商品导航条-->
+<section class="bcj">
+    <div class="bcj-top">
+        <div class="bcj-title">
+            <ul>
+               <!--  <li><a href="#">全部</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">9块邮</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li>
+                <li><a href="#">热销</a></li> -->
+            </ul>
+        </div>
+        <div class="bcj-search">
+            <span></span>
+        </div>
+    </div>
+    <div class="bcj-list clearfix">
+        <!-- <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/hb.png" alt="">
+        </a>
+        <div class="tp-body ">
+            <p class="title">[包邮]双十一红包 今日开启</p>
+            <p class="price">&yen;0.0 <del>&yen;0</del></p>
+            <p class="juan">
+                <span class="tiao">1%</span>
+                <span class="yl">已领82张</span>
+            </p>
+            <a class="link">点击领15元优惠券</a>
+            <p class="btn-lj">下单链接</p>
+        </div>
+   </div>
+
+   <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/hb.png" alt="">
+        </a>
+        <div class="tp-body ">
+             <p class="title">[包邮]双十一红包 今日开启</p>
+            <p class="price">&yen;0.0 <del>&yen;0</del></p>
+            <p class="juan">
+                <span class="tiao">1%</span>
+                <span class="yl">已领82张</span>
+            </p>
+            <span class="link">点击领15元优惠券</span>
+            <p class="btn-lj">下单链接</p>
+        </div>
+   </div>
+
+   <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/hb.png" alt="">
+        </a>
+        <div class="tp-body ">
+            <p class="title">[包邮]双十一红包 今日开启</p>
+            <p class="price">&yen;0.0 <del>&yen;0</del></p>
+            <p class="juan">
+                <span class="tiao">1%</span>
+                <span class="yl">已领82张</span>
+            </p>
+            <span class="link">点击领15元优惠券</span>
+            <p class="btn-lj">下单链接</p>
+        </div>
+   </div> -->
+  </div>
+</section>
+
+
+
+<!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--模板-->
+<script type='text/html' id='bcjtitletmp'>
+     {{each result as value i}}
+     <li><a href="#" data-titleid='{{value.titleId}}'>{{value.title}}</a></li>
+     {{/each}}
+</script>
+
+<script type='text/html' id='bcjtmp'>
+{{each result as value i}}
+ <div class="tp">
+        <a href="#" class="tp-left">
+        {{#value.productImg}}
+        </a>
+        <div class="tp-body ">
+            <p class="title">{{#value.productName}}</p>
+            <p class="price">{{#value.productPrice}}</p>
+            <p class="juan">
+                <span class="yl">{{#value.productCouponRemain}}</span>
+            </p>
+            <p class="link">{{#value.productCoupon}}</p>
+            <p class="btn-lj">{{#value.productHref}}</p>
+        </div>
+   </div>
+{{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/baicaijia.js"></script>
+
+ </body>
+ </html>

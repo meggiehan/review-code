@@ -1,0 +1,71 @@
+#productlist{
+    >ul{
+        overflow: hidden;
+        >li{
+            width: 50%;
+            float: left;
+            height:7.5rem;
+            border:1px solid #ccc;
+            border-right: none;
+            border-bottom: none;
+            >a{
+                display: inline-block;
+                text-decoration: none;
+                >img{
+                 width:3.5rem;
+                 height:3.5rem;
+                 margin-left: 0.78rem;
+                 margin-top:0.39rem;
+                }
+            >.title{
+                margin-top:0.233333rem;
+                 word-break: break-all;
+                 margin-left:0.37rem;
+                 color: #333333;
+                 word-break: break-all;
+                 font-size: 0.5rem;
+                 text-align: left;
+                 text-align-last: left;
+                 line-height: 18px;
+                 height: 36px;
+                 word-break: break-all;
+                 display: -webkit-box;
+                 -webkit-line-clamp: 2;
+                 -webkit-box-orient: vertical;
+                 overflow: hidden;
+            }
+            >.price{
+                margin-top:0.2rem;
+                color:#FF6C00;
+                margin-left:0.37rem;
+                font-size:0.45rem;
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                height: 16px;
+                line-height: 16px;
+            }
+            >span{
+                display: inline-block;
+                margin-left:0.37rem;
+                color:#A9A1A1;
+            }
+        }
+
+        }
+        >li:nth-child(1){
+            border-top: none;
+        }
+        >li:nth-child(2){
+            border-top: none;
+        }
+        >li:nth-last-child(1){
+            border-bottom: 1px solid #ccc;
+        }
+        >li:nth-last-child(2){
+            border-bottom: 1px solid #ccc;
+          }
+    }
+}

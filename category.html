@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/category.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--header-->
+    <header id="header">
+        <a href="#" class="logo"><img src="images/header_logo.png" alt="" /></a>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+<!--search-->
+    <section id='search'>
+        <form action="#">
+            <input type="search" name="" placeholder="请输入要比价的商品">
+            <input type="submit" name="" value="搜索">
+        </form>
+    </section>
+<!--分类区域-->
+<section id='category'>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <!-- <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          大家电
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+       <div class="row">
+            <div class="col-xs-4"><a href="#">电视</a></div>
+            <div class="col-xs-4"><a href="#">空调</a></div>
+            <div class="col-xs-4"><a href="#">影院</a></div>
+            <div class="col-xs-4"><a href="#">电视</a></div>
+            <div class="col-xs-4"><a href="#">空调</a></div>
+            <div class="col-xs-4"><a href="#">影院</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         手机数码
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+         <div class="row">
+            <div class="col-xs-4"><a href="#">电视</a></div>
+            <div class="col-xs-4"><a href="#">空调</a></div>
+            <div class="col-xs-4"><a href="#">影院</a></div>
+            <div class="col-xs-4"><a href="#">电视</a></div>
+            <div class="col-xs-4"><a href="#">空调</a></div>
+            <div class="col-xs-4"><a href="#">影院</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         电脑办公
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+         <div class="row">
+            <div class="col-xs-4"><a href="#">电视</a></div>
+            <div class="col-xs-4"><a href="#">空调</a></div>
+            <div class="col-xs-4"><a href="#">影院</a></div>
+            <div class="col-xs-4"><a href="#">电视</a></div>
+            <div class="col-xs-4"><a href="#">空调</a></div>
+            <div class="col-xs-4"><a href="#">影院</a></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+</section>
+
+
+<!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--标题模板-->
+<script type='text/html' id='categorytmp'>
+      {{each result as value i}}
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}" aria-expanded="true" aria-controls="collapseOne" data-titleId='{{value.titleId}}'>
+              {{value.title}}
+            </a>
+          </h4>
+        </div>
+        <div id="collapse{{i}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+
+          </div>
+        </div>
+      </div>
+      {{/each}}
+</script>
+<!--列表模板-->
+<script type='text/html' id='categorylisttmp'>
+    <div class="row">
+    {{each result as value i}}
+            <div class="col-xs-4"><a href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a></div>
+    {{/each}}
+    </div>
+</script>
+
+
+
+ <script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/brand.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--header-->
+    <header id="header">
+        <a href="#" class="logo"><img src="images/header_logo.png" alt="" /></a>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+<!--search-->
+    <section id='search'>
+        <form action="#">
+            <input type="search" name="" placeholder="请输入要比价的商品">
+            <input type="submit" name="" value="搜索">
+        </form>
+    </section>
+
+    <div class="category-title clearfix">
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页 </a></li>
+            <li><a href="brandTitle.html">全部分类 </a></li>
+            <li>品牌大全</li>
+        </ol>
+    </div>
+<!--品牌排行-->
+    <div class="pinpai">
+      平板电视哪个牌子好
+    </div>
+<!--分类区域-->
+<div class="areaone">
+ <!--  <ul>
+    <li><a href=""><span class="sq">1</span><p class="title">三星平板电视</p><span class="shuoming">30天全网销售:242408件</span></a></li>
+    <li><a href=""><span class="sq">2</span><p class="title">三星平板电视</p><span class="shuoming">30天全网销售:242408件</span></a></li>
+    <li><a href=""><span class="sq">3</span><p class="title">三星平板电视</p><span class="shuoming">30天全网销售:242408件</span></a></li>
+    <li><a href=""><span class="sq">4</span><p class="title">三星平板电视</p><span class="shuoming">30天全网销售:242408件</span></a></li>
+    <li><a href=""><span class="sq">5</span><p class="title">三星平板电视</p><span class="shuoming">30天全网销售:242408件</span></a></li>
+  </ul> -->
+</div>
+
+<div class="pinpai">
+      平板电视产品销量排行
+    </div>
+
+<div class="areatwo">
+  <!-- <ul>
+    <li>
+    <a href="#">
+      <img src="images/leshi.png" alt="">
+      <h5>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</h5>
+      <span>&yen;3266.00</span>
+      <em>报价(6)</em><em>评论(3522)</em>
+    </a>
+    </li>
+  </ul> -->
+</div>
+
+<div class="pinpai">
+      平板电视最新评论
+    </div>
+
+
+<div class="areathree">
+  <!-- <div class="top clearfix">
+    <img src="images/leshi.png" alt="">
+    <h5>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</h5>
+  </div>
+  <div class="bottom clearfix">
+    <p class="user">w***6</p><span class="star">★★★</span>
+    <p class="time">2015/12/29</p>
+    <i></i>
+    <p class="pinlun">双12抢的单，14号收到货，速度奇快。特意使用了10来天，对产品有了一点的操控和了解，才来评价! 超级电视超级之处：1，颜值高，整体简洁，窄边框，前面板只有一个Letv的logo指示灯，无其他按键占用面板空间，外观简洁大气，边框做工精细。 2、操作简便，并可启用语音遥控，网络接入速度快，操作系统简洁，一目了然，运行速度相当流畅。 3、内容：乐视自家的视频APP内容相当丰富，科学归类，能快速找到想看的节目，第三方软件安装也方便，即使未登陆乐视会员，也能观看到高清影片及电视直播。 超级电视相对其他电视，有着很大的竞争优势。买这个电视，物有所值</p>
+  </div> -->
+</div>
+<!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--模板一-->
+<script type='text/html' id='brandtmp'>
+   <ul>
+   {{each result as value i}}
+    <li><a href="productlist.html?categoryid={{value.categoryId}}&pageid=1"><span class="top">{{i+1}}</span><p class="title">{{value.brandName}}</p><span class="shuoming">{{value.brandInfo}}</span></a></li>
+    {{/each}}
+  </ul>
+</script>
+
+<!--模板二-->
+<script type='text/html' id='areatmp'>
+  <ul>
+  {{each result as value i}}
+    <li>
+    <a href="#" data-productid={{i}} class="dj">
+      {{#value.productImg}}
+      <h5>{{value.productName}}</h5>
+      <span>{{value.productPrice}}</span>
+      <em>{{value.productQuote}}</em><em>{{value.productCom}}</em>
+    </a>
+    </li>
+    {{/each}}
+  </ul>
+</script>
+<!--模板三-->
+<script type='text/html' id='areaalltmp'>
+{{each result as value i}}
+  <div class="bigareathree">
+    <div class="top clearfix">
+    {{#productImg}}
+    <h5>{{productName}}</h5>
+  </div>
+  <div class="bottom clearfix">
+    <p class="user">{{value.comName}}</p><span class="star">★★★</span>
+    <p class="time">{{value.comTime}}</p>
+    <i></i>
+    <p class="pinlun">{{value.comContent}}</p>
+  </div>
+  </div>
+  {{/each}}
+</script>
+
+
+ <script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/brand.js"></script>
+</body>
+</html>

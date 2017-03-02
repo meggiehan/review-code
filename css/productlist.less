@@ -1,0 +1,93 @@
+#productlist{
+    margin-bottom:0.5rem;
+    width: 100%;
+    >.category-title{
+        background-color: #f5f5f5;
+        position: relative;
+        >.breadcrumb{
+            float: left;
+            margin-bottom: 0;
+            >li{
+                &::before{
+                    content: '';
+                }
+                &::after{
+                    content:'>';
+                }
+            }
+            }
+            >.btn-default{
+                float: right;
+                height: 1rem;
+                margin-top: 0.066667rem;
+        }
+    }
+    >.product{
+        >.tp{
+            float: left;
+            padding:0.133333rem;
+            border-bottom:1px solid #ccc;
+            position:relative;
+            >.tp-left{
+                >.img{
+                    width:1.333333rem;
+                    height:1.333333rem;
+                }
+            }
+            >.tp-body{
+            margin-top:0.266667rem;
+            width:63%;
+            float: right;
+            overflow: hidden;
+            >.price{
+                color: red;
+            }
+            >em{
+                font-size:0.16rem;
+                color: #666;
+
+              }
+           }
+        }
+    }
+}
+
+.productoption{
+        padding:0.133333rem;
+        position:relative;
+        >.page-prev{
+        z-index:1;
+       margin-left: 0.36rem;
+        }
+        >.page-next{
+        z-index:1;
+       margin-right:0.36rem;
+        }
+        >.dropdown{
+            position:absolute;
+            top:0;
+            left:50%;
+            margin-left: -1.15rem;
+            margin-top:0.133333rem;
+            text-align: center;
+            >.dropdown-menu{
+                max-width:2.3rem;
+                min-width: 2.3rem;
+                >li{
+                    text-align:left;
+                    margin-left:-0.266667rem;
+                    max-width:2.3rem;
+                    height:0.8rem;
+                    line-height:0.8rem;
+                    border-bottom:1px solid #ccc;
+                }
+                >li:last-child{
+                    border-bottom:none;
+                }
+                >li:nth-child(2){
+                    height:0.9rem;
+                    line-height:0.9rem;
+                }
+            }
+        }
+    }

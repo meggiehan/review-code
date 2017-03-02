@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/brandTitle.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--header-->
+    <header id="header">
+        <a href="#" class="logo"><img src="images/header_logo.png" alt="" /></a>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+<!--search-->
+    <section id='search'>
+        <form action="#">
+            <input type="search" name="" placeholder="请输入要比价的商品">
+            <input type="submit" name="" value="搜索">
+        </form>
+    </section>
+
+    <div class="category-title clearfix">
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页 </a></li>
+            <li><a href="#">全部分类 </a></li>
+            <li>品牌大全</li>
+        </ol>
+    </div>
+<!--品牌排行-->
+    <div class="pinpai">
+      热门品牌排行
+    </div>
+<!--分类区域-->
+<section id='brandtitle'>
+    <!-- <ul>
+      <li><a href="#">平板电视</a></li>
+      <li><a href="#">平板电视</a></li>
+      <li><a href="#">平板电视</a></li>
+    </ul> -->
+</section>
+
+
+<!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--标题模板-->
+<script type='text/html' id='brandtitletmp'>
+    <ul>
+      {{each result as value i}}
+      <li><a href="brand.html?brandtitleid={{value.brandTitleId}}" data-brandtitleid={{value.brandTitleId}}>{{value.brandTitle}}</a></li>
+      {{/each}}
+    </ul>
+</script>
+<!--列表模板-->
+<!-- <script type='text/html' id='categorylisttmp'>
+    <div class="row">
+    {{each result as value i}}
+            <div class="col-xs-4"><a href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a></div>
+    {{/each}}
+    </div>
+</script>
+ -->
+
+
+ <script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/brandTitle.js"></script>
+</body>
+</html>

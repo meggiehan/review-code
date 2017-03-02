@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/discount.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--header-->
+    <header id="header">
+        <img src="images/arr2.png" alt="">
+        <p>国内折扣</p>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+<!--商品列表详情-->
+<section id='productmore'>
+   <!--  <p class="titleone">西域美农新疆特产五星和田红枣250g*2</p>
+    <p class="price">19.8元(5件99元)</p>
+    <span>京东商城  10-22 13:28 chenjin / 慢慢买</span>
+    <P class='titletwo'>原价25.9一斤，凑满5件只要99元价格。 枣子紧实，入口甜爽。适合公司人多的买吧，价格还是不错的。</P>
+    <img src="images/hua.png" alt="" class="hua">
+    <img src="images/zao.png" alt="" class="zao">
+    <p class="buy">前往购买</p>
+    <img src="images/mmbweixin2.png" alt="" class="weixin">
+    <p class="pinglun">发表评论</p>
+    <div class="pinglunarea">
+        <div class="hang">
+            <a href="#" class="btnn">发表评论</a>
+        </div>
+    </div> -->
+</section>
+
+<!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--模板-->
+<script type='text/html' id='productmoretmp'>
+  {{each result as value i}}
+    <p class="titleone">{{value.productName}}</p>
+    <p class="price">{{value.productPrice}}</p>
+    <span>{{value.productFrom}}  {{value.productTime}} {{value.productTips}} </span>
+    <P class='titletwo'>{{value.productInfo}}</P>
+    <img src="images/hua.png" alt="" class="hua">
+    <a href="#">{{#value.productImg}}</a>
+    <p class="buy">前往购买</p>
+    <img src="images/mmbweixin2.png" alt="" class="weixin">
+    <p class="pinglun">发表评论</p>
+    <textarea class="pinglunarea" id='text'>
+    </textarea>
+    <div class="hang">
+            <a href="#" class="btnn" id='btn'>发表评论</a>
+        </div>
+    <div class="pl">
+        <p>最新评论</p>
+        {{value.productName}}
+        <ul id='ul'></ul>
+    </div>
+    {{/each}}
+</script>
+
+<!-- <script>
+    var btn=document.getElementById('btn');
+    var ul=document.getElementById('ul');
+    var text=document.getElementById('text');
+
+    btn.onclick=function(){
+        if(text.value===''){
+            alert('还没有发表评论···');
+            return;
+        }
+        var lis=ul.children;
+        if(lis.length===0){
+            ul.appendChild(li);
+        }else{
+            ul.insertBefore('li',lis[0]);
+        }
+        var span=document.createElement('span');
+        li.appendChild(span);
+        span.innerText=text.value;
+    }
+</script> -->
+
+<script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/discount.js"></script>
+
+ </body>
+ </html>

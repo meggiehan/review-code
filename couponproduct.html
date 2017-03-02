@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/couponproduct.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+
+ <div id="zz">
+   <div class="banner">
+        <ul class="all">
+        <li><img src="images/hanbao.png" alt=""></li>
+        <li><img src="images/shutiao.png" alt=""></li>
+        <li><img src="images/hanbao.png" alt=""></li>
+        <li><img src="images/shutiao.png" alt=""></li>
+        <li><img src="images/hanbao.png" alt=""></li>
+    </ul>
+    <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+   </div>
+    <div class="btn">取消</div>
+</div>
+<!--header-->
+    <header id="header">
+        <img src="images/arr3.png" alt="">
+        <p>肯德基優惠券</p>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+
+<!--tp-->
+<div class="eat clearfix">
+<p class="youhuititle">--點餐前出示手機中的優惠卷，即可享受優惠</p>
+ <!--   <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/hanbao.png" alt="">
+          <div class="tp-body">
+            <h5>C15  大薯条 2016年10月凭肯德基优惠券</h5>
+            <p class="price">&yen;28</p>
+            <span class="time">有效期至10月31日</span>
+            <i>></i>
+          </div>
+          </a>
+    </div>
+
+     <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/hanbao.png" alt="">
+
+          <div class="tp-body">
+            <h5>C15  大薯条 2016年10月凭肯德基优惠券</h5>
+            <p class="price">&yen;28</p>
+            <span class="time">有效期至10月31日</span>
+           <i>></i>
+          </div></a>
+    </div>
+
+     <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/hanbao.png" alt="">
+
+          <div class="tp-body">
+            <h5>C15  大薯条 2016年10月凭肯德基优惠券</h5>
+            <p class="price">&yen;28</p>
+            <span class="time">有效期至10月31日</span>
+            <i>></i>
+          </div></a>
+    </div> -->
+</div>
+
+    <!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--模板-->
+<script type='text/html' id='conponproducttmp'>
+<p class="youhuititle">--點餐前出示手機中的優惠卷，即可享受優惠</p>
+{{each result as value i}}
+      <div class="tp">
+        <a href="" title="" class="tp-left">
+        {{#value.couponProductImg}}
+          <div class="tp-body">
+            <h5>{{value.couponProductName}}</h5>
+            <p class="price">{{value.couponProductPrice}}</p>
+            <span class="time">{{value.couponProductTime}}</span>
+            <i></i>
+          </div>
+          </a>
+ </div>
+{{/each}}
+</script>
+<script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/couponproduct.js"></script>
+
+ </body>
+ </html>

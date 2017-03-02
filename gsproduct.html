@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/gsproduct.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--header-->
+    <header id="header">
+        <img src="images/arr2.png" alt="">
+        <p>凑单品</p>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+<!--nav-->
+<section class="gsall">
+    <div class="gslist">
+        <div class="gsnav">
+            <div class="title">
+                <ul>
+                    <li class="on"><a href="#">京东<i></i></a></li>
+                    <li class=""><a href="#">华北<i></i></a></li>
+                    <li class=""><a href="#">1元<i></i></a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <a href="#"><img src="images/search.png" alt=""></a>
+            </div>
+            <div class="popsort popbox" id='shop'>
+                <!-- <ul>
+                    <li class="on"><a href="javascript:GetRequest('site',1)">京东</a></li>
+                    <li><a href="javascript:GetRequest('site',13)">一号店</a></li>
+                    <li><a href="javascript:GetRequest('site',190)">天猫超市</a></li>
+                </ul> -->
+            </div>
+            <div id="area" class="popcat popbox">
+                <!--  <ul>
+                        <li class="on"><a href="javascript:GetRequest('area', 1)">华北（北京、山西等）</a></li>
+                        <li><a href="javascript:GetRequest('area', 2)">华东（山东、浙江等）</a></li>
+                        <li><a href="javascript:GetRequest('area', 3)">华南（广东、广西等）</a></li>
+                        <li><a href="javascript:GetRequest('area', 4)">华中（湖北、河南等）</a></li>
+                        <li><a href="javascript:GetRequest('area', 5)">西南（四川、云南等）</a></li>
+                        <li><a href="javascript:GetRequest('area', 6)">东北（辽宁、吉林等）</a></li>
+                        <li><a href="javascript:GetRequest('area',7)">西北（宁夏、新疆等）</a></li>
+                    </ul> -->
+            </div>
+            <div class="popprice popbox" id='price'>
+                 <ul>
+                        <li class="on"><a href="javascript:GetRequest('areaMoney', 0);">全部价格</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="gslists">
+           <!--  <ul>
+                <li>
+                <a href="#">
+                    <div class="img"><img src="images/ylm.png" alt="" /></div>
+                    <div class="tit">[京东超市] 喜之郎 优乐美</div>
+                    <div class="price">&yen;1.00</div>
+                    <div class="btn"><p>去凑单</p></div>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <div class="img"><img src="images/ylm.png" alt="" /></div>
+                    <div class="tit">[京东超市] 喜之郎 优乐美</div>
+                    <div class="price">&yen;1.00</div>
+                    <div class="btn"><p>去凑单</p></div>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <div class="img"><img src="images/ylm.png" alt="" /></div>
+                    <div class="tit">[京东超市] 喜之郎 优乐美</div>
+                    <div class="price">&yen;1.00</div>
+                    <div class="btn"><p>去凑单</p></div>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <div class="img"><img src="images/ylm.png" alt="" /></div>
+                    <div class="tit">[京东超市] 喜之郎 优乐美</div>
+                    <div class="price">&yen;1.00</div>
+                    <div class="btn"><p>去凑单</p></div>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <div class="img"><img src="images/ylm.png" alt="" /></div>
+                    <div class="tit">[京东超市] 喜之郎 优乐美</div>
+                    <div class="price">&yen;1.00</div>
+                    <div class="btn"><p>去凑单</p></div>
+                </a>
+                </li>
+                <li>
+                <a href="#">
+                    <div class="img"><img src="images/ylm.png" alt="" /></div>
+                    <div class="tit">[京东超市] 喜之郎 优乐美</div>
+                    <div class="price">&yen;1.00</div>
+                    <div class="btn"><p>去凑单</p></div>
+                </a>
+                </li>
+            </ul> -->
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--模板-->
+<script type='text/html' id='gsshoptmp'>
+    <ul>
+    {{each result as value i}}
+        <li class="on"><a href="#" data-shopid={{value.shopId}}>{{value.shopName}}</a></li>
+    {{/each}}
+    </ul>
+</script>
+<script type='text/html' id='gsareatmp'>
+    <ul>
+    {{each result as value i}}
+        <li class="on"><a href="#" data-areaid={{value.areaId}}>{{value.areaName}}</a></li>
+    {{/each}}
+    </ul>
+</script>
+<script type='text/html' id='gstmp'>
+     <ul>
+     {{each result as value i}}
+        <li>
+          <a href="#">
+          <div class="img"><img src="{{#value.productImg}}" style="width: 120px; height: 150px;"></div>
+          <div class="tit">{{value.productName}}</div>
+          <div class="price">{{value.productPrice}}</div>
+          <div class="btn"><p>去凑单</p></div>
+          </a>
+         </li>
+         {{/each}}
+     </ul>
+</script>
+
+
+ <script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/gsproduct.js"></script>
+
+ </body>
+ </html>

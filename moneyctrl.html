@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/fixScreen.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet/less" href="css/moneyctrl.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--header-->
+    <header id="header">
+        <img src="images/arr2.png" alt="">
+        <p>省钱控-最新优惠</p>
+        <a href="#" class="app"><img src="images/header_app.png" alt="" /></a>
+    </header>
+<!--打折商品列表-->
+<section id='productlist'>
+    <!-- <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/shop.png" alt="">
+        </a>
+    <div class="tp-body">
+        <h5>HG 华光 QH0190 手持电熨斗</h5>
+        <p class="price">39元包邮(99-60)</p>
+        <span class="from">天猫旗舰店 | 10-25 13:11</span>
+        <span class="comment"><i class="icon-comment"></i>1</span>
+    </div>
+  </div>
+
+  <div class="tp">
+        <a href="#" class="tp-left">
+        <img src="images/shop.png" alt="">
+        </a>
+    <div class="tp-body">
+        <h5>HG 华光 QH0190 手持电熨斗</h5>
+        <p class="price">39元包邮(99-60)</p>
+        <span class="from">天猫旗舰店 | 10-25 13:11</span>
+        <span class="comment"><i class="icon-comment"></i>1</span>
+    </div>
+  </div> -->
+</section>
+
+    <!-- 商品上下页 -->
+<div class="productoption clearfix">
+    <a href="#" class="btn btn-default page-prev f_left">上一页</a>
+    <a href="#" class="btn btn-default page-next f_right">下一页</a>
+    <div class="dropdown">
+                <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default">
+                        第一页
+                        <span class="caret"></span>
+                    </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>第一页</li>
+                    <li>第二页</li>
+                    <li>第三页</li>
+                </ul>
+            </div>
+</div>
+
+<!--底部-->
+<footer id='footer'>
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="#">登录</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">注册</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#"><img src="images/arrow.png" alt="">返回顶部</a>
+        </div>
+    </div>
+    <p class="p"><a href="#">手机APP下载</a> <a href="#">慢慢买手机版</a> <a href="#">--掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--模板-->
+<script type='text/html' id='productlistalltmp'>
+  {{each result as value i}}
+    <div class="tp">
+        <a href="#" class="tp-left">
+        {{#value.productImgSm}}
+        </a>
+    <div class="tp-body">
+        <h5>{{value.productName}}</h5>
+        <p class="price">{{value.productPinkage}}</p>
+        <span class="from">{{value.productFrom}} | {{value.productTime}} </span>
+        <span class="comment"><i class="icon-comment"></i>
+        {{value.productComCount.replace('有','').replace('人评论','')}}
+        </span>
+    </div>
+  </div>
+  {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.js"></script>
+ <script src="lib/bootstrap/js/bootstrap.js"></script>
+ <script src="lib/template.js"></script>
+ <script src="js/moneyctrl.js"></script>
+
+ </body>
+ </html>
